@@ -1,6 +1,6 @@
 class Plinko{
 
-    constructor(x,y,r)
+    constructor(x,y)
     {
     
     var options={
@@ -9,12 +9,12 @@ class Plinko{
    
     }
     
-   
+    this.x=x;
+    this.y=y;
+    this.r=10
     
     this.body=Bodies.circle(this.x, this.y, this.r, options)
-     this.x=x;
-    this.y=y;
-    this.r=r
+    
     World.add(world, this.body);
     }
     
