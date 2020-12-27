@@ -24,9 +24,7 @@ function setup() {
 
   ground = new Ground(240,height,480,20);
 
-  if(frameCount%60===0){
-    particle.push(new Particle(random(width/2-10,width/2+10),10,10))
-  }
+  
   
   for(var k=0;k <= width;k=k+80){
     divisions.push(new Divisions(k,height-divisionHeight/2,10,divisionHeight));
@@ -56,6 +54,9 @@ function draw() {
   rectMode(CENTER);
   background(0);  
   ground.display();
+  if(frameCount%60===0){
+    particle.push(new Particle(random(width/2-10,width/2+10),10,10))
+  }
   for(var i=0; i<particle.length; i++){
     particle[i].display();
   }
